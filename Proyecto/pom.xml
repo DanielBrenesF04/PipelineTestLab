@@ -55,9 +55,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>  
-				    <start-class>com.cenfotec.lab5.lab5.ProyectoFinal</start-class>
-                </configuration>
 			</plugin>
 		</plugins>
 	</build>
