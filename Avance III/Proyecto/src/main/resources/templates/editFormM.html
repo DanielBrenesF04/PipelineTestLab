@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar entrada</title>
+</head>
+<body>
+<h1>Editar</h1>
+<form action="#" th:action="@{/editarM/{id}(id=${id})}" th:object="${MembresiaToEdit}" method="post">
+    <label for="IdTiquete">Id de la membresia</label>
+    <input type="text" th:field="*{id}" id="IdTiquete"/>
+
+    <label for="nombreDuenno">Nombre del dueño</label>
+    <input type="text" th:field="*{nombreDuenno}" id="nombreDuenno"/>
+
+    <label for="Cedula">Cedula del dueño</label>
+    <input type="text" th:field="*{cedula}" id="Cedula"/>
+
+    <label for="PorcentajeDescuento">Porcentaje de descuento del Cliente</label>
+    <input type="text" th:field="*{porcentajeDescuento}" id="PorcentajeDescuento"/>
+
+    <label for="nivelMiembro">nivel del miembro del Cliente</label>
+    <input type="text" th:field="*{nivelMiembro}" id="nivelMiembro"/>
+
+    <label for="puntos">puntos del dueño</label>
+    <input type="text" th:field="*{puntos}" id="puntos"/>
+
+    <input type="submit" value="Guardar Cambios">
+</form>
+</body>
+</html>

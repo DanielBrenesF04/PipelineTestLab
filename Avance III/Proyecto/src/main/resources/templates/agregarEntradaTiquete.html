@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agregar entrada a Tiquete</title>
+</head>
+<body>
+<h1>Insertar</h1>
+<form action="#" th:action="@{/agregarEntradaTiquete}" th:object="${tiquete}" method="post">
+
+    <label for="IdTiquete">Id del tiquete</label>
+    <input type="text" th:field="*{id}" id="IdTiquete"/>
+
+    <label for="NombrePelicula">Nombre de la pelicula</label>
+    <input type="text" th:field="*{nombrePelicula}" id="NombrePelicula"/>
+
+    <label for="Sala">Sala del tiquete</label>
+    <input type="text" th:field="*{sala}" id="Sala"/>
+
+    <label for="Asiento">Asiento del Tiquete</label>
+    <input type="text" th:field="*{asiento}" id="Asiento"/>
+
+    <input type="submit" value="add entry">
+</form>
+<a href="/">Volver al principal</a>
+</body>
+</html>

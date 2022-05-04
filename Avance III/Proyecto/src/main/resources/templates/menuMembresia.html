@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Proyecto</title>
+</head>
+<body>
+<div>
+    <h1>Menu de Membresias</h1>
+    <a href="/">Volver</a>
+    <a href="/agregarEntradaM">Add entry</a>
+    <ul>
+        <div th:each="entry,status : ${Membresia}">
+            <li>
+                <div></div>
+                <div>
+                    <div>
+                        <h4>Nombre del Dueño: <span th:text="${entry.NombreDuenno}">Nombre de la Pelicula</span></h4>
+
+                    </div>
+                    <div class="tl-body">
+                        <p>Identificacion de la membresia: <span th:text="${entry.id}">Id del Dueño</span></p>
+                        <p>Identificacion del dueño: <span th:text="${entry.Cedula}">Cedula</span></p>
+                        <p>Porcentaje de descuento en compras%<span th:text="${entry.PorcentajeDescuento}">Membresia</span></p>
+                        <p>Nivel de membresia: <span th:text="${entry.NivelMiembro}">NivelMiembro</span></p>
+                        <p>Puntos en la membresia: <span th:text="${entry.Puntos}">Puntos</span></p>
+
+                    </div>
+
+                </div>
+                <a th:href="@{/editarM/{id}(id=${entry.id})}">Editar </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a th:href="@{/borrarM/{id}(id=${entry.id})}">Borrar Membresia </a>
+            </li>
+        </div>
+    </ul>
+</div>
+</body>
+</html>

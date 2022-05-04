@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Proyecto</title>
+</head>
+<body>
+<div>
+    <h1>Menu de Tiquetes</h1>
+    <a href="/">Volver</a>
+    <a href="/agregarEntradaTiquete">Add entry</a>
+    <ul>
+        <div th:each="entry,status : ${Tiquete}">
+            <li>
+                <div></div>
+                <div>
+                    <div>
+                        <h4>Nombre de la pelicula: <span th:text="${entry.NombrePelicula}">Nombre de la Pelicula</span></h4>
+
+                    </div>
+                    <div class="tl-body">
+                        <p>ID: <span th:text="${entry.id}">Id</span></p>
+                        <p>Sala del tiquete: <span th:text="${entry.Sala}">Sala pelicula</span></p>
+                        <p>Asiento del tiquete: <span th:text="${entry.Asiento}">Asiento del tiquete</span></p>
+
+                    </div>
+
+                </div>
+                <a th:href="@{/editarT/{id}(id=${entry.id})}">Editar </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a th:href="@{/borrarT/{id}(id=${entry.id})}">Borrar </a>
+            </li>
+        </div>
+    </ul>
+</div>
+</body>
+</html>

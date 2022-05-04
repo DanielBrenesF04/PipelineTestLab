@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar entrada</title>
+</head>
+<body>
+<h1>Editar</h1>
+<form action="#" th:action="@{/editarT/{id}(id=${id})}" th:object="${TiqueteToEdit}" method="post">
+    <label for="IdTiquete">Id del tiquete</label>
+    <input type="text" th:field="*{id}" id="IdTiquete"/>
+
+    <label for="NombrePelicula">Nombre de la pelicula</label>
+    <input type="text" th:field="*{nombrePelicula}" id="NombrePelicula"/>
+
+    <label for="Sala">Sala del tiquete</label>
+    <input type="text" th:field="*{sala}" id="Sala"/>
+
+    <label for="Asiento">Asiento del Tiquete</label>
+    <input type="text" th:field="*{asiento}" id="Asiento"/>
+
+    <input type="submit" value="Guardar Cambios">
+</form>
+</body>
+</html>

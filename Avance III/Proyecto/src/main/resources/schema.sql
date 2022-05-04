@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS Tiquete;
+DROP TABLE IF EXISTS Membresia;
+CREATE TABLE Tiquete(id INT PRIMARY KEY, NombrePelicula VARCHAR(4096), Sala VARCHAR(4096), Asiento VARCHAR(4096));
+CREATE TABLE Membresia(id INT PRIMARY KEY, NombreDuenno VARCHAR(4096), Cedula VARCHAR(4096),PorcentajeDescuento INT,NivelMiembro INT,Puntos INT);

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agregar entrada a Membresias</title>
+</head>
+<body>
+<h1>Insertar</h1>
+<form action="#" th:action="@{/agregarEntradaM}" th:object="${membresia}" method="post">
+
+    <label for="IdTiquete">Id del tiquete</label>
+    <input type="text" th:field="*{id}" id="IdTiquete"/>
+
+    <label for="nombreDuenno">Nombre del dueño</label>
+    <input type="text" th:field="*{nombreDuenno}" id="nombreDuenno"/>
+
+    <label for="Cedula">Cedula del dueño</label>
+    <input type="text" th:field="*{cedula}" id="Cedula"/>
+
+    <label for="PorcentajeDescuento">Porcentaje de descuento del Cliente</label>
+    <input type="text" th:field="*{porcentajeDescuento}" id="PorcentajeDescuento"/>
+
+    <label for="nivelMiembro">nivel del miembro del Cliente</label>
+    <input type="text" th:field="*{nivelMiembro}" id="nivelMiembro"/>
+
+    <label for="puntos">puntos del dueño</label>
+    <input type="text" th:field="*{puntos}" id="puntos"/>
+
+    <input type="submit" value="add entry">
+</form>
+<a href="/">Volver al principal</a>
+</body>
+</html>
