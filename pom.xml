@@ -15,7 +15,7 @@
 	<description>Laboratorio 5 del curso de componentes</description>
 	<properties>
 		<java.version>1.8</java.version>
-		<start-class>com.cenfotec.lab5.lab5.main</start-class>
+		<start-class>com.cenfotec.lab5.lab5.ProyectoFinal</start-class>
 	</properties>
 	<dependencies>
 
